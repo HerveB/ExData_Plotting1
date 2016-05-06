@@ -1,9 +1,6 @@
 ## Coursera's Exploratory Data Analysis - Project assignemnt 1
 ## Plot 1
 
-# Set work directory
-setwd("/Users/herve/Git/ExData_Plotting1")
-
 ## Download Data if not already done
 if(!file.exists("household_power_consumption.txt")) {
   ## Download and unzip the data
@@ -34,7 +31,7 @@ epcData$Date <- as.Date(epcData$Date, "%d/%m/%Y")
 dateFilter <- as.Date(c("2007-02-01","2007-02-02"))
 epcData <- subset(epcData, epcData$Date %in% dateFilter)
 
-message("Generating graph: Plot1.png")
+message("Generating graph: plot1.png")
 ## Create plot
 png("plot1.png", width=480, height=480)
 hist(epcData$Global_active_power, col="red", main="Global Active Power", ylab="Frequency", xlab="Global Active Power (kilowatts)")
